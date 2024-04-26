@@ -7,7 +7,7 @@ exports.register = async (req, res, next) => {
         const { email, password, name, address, phoneNumber } = req.body;
 
         // get the photo
-        const { image } = req.files;
+        const image = req?.files?.image;
 
         if (!email || email == "") {
             return next({
