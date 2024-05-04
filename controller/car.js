@@ -47,7 +47,7 @@ exports.createCar = async (req, res, next) => {
             available,
             availableAt,
         } = req.body;
-        const { image } = req?.files?.image;
+        const { image } = req.files;
         if (!brand || brand == "") {
             return next({
                 message: "Brand must be provided!",
@@ -147,7 +147,7 @@ exports.updateCar = async (req, res, next) => {
             available,
             availableAt,
         } = req.body;
-        const { image } = req.files;
+        const image = req?.files?.image;
         if (!brand || brand == "") {
             return next({
                 message: "Brand must be provided!",
