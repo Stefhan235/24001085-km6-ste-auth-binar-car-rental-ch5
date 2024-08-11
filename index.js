@@ -46,5 +46,5 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is runing on port ${port}`);
+    console.log(`Local: http://localhost:4000/`);
 });
